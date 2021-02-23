@@ -1,0 +1,5 @@
+ <%= simple_form_for @article do |f| %>
+    <%= f.input :title, label: 'Title', label_html: {class: "font-weight-bold" } %>
+    <%= f.input :content, as: :text, label_html: {class: "font-weight-bold" }%>
+    <%= f.button :submit, class: "btn-primary"%>
+<% end %>

@@ -1,0 +1,20 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 mx-auto mt-5">
+         <article>
+             <h2><%=@article.title%>
+                <small>
+                    <%= link_to '<i class="fas fa-pencil-alt" style="color: cornflowerblue;"></i>'.html_safe, edit_article_path %>
+                    <%= link_to '<i class="fas fa-trash-alt" style="color: cornflowerblue;"></i>'.html_safe, article_path(@article), 
+                        method: :delete,
+                        data: { confirm: "Are you sure?" }%>
+                </small>
+             </h2>
+            <div class="border-top mt-3 mb-3"></div>
+            <p><%= @article.content %></p>
+         </article>
+            
+        </div>
+    </div>
+</div>
